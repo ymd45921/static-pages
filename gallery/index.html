@@ -7,7 +7,6 @@
 
 		<link rel="dns-prefetch" href="//fonts.googleapis.com">
 		<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-		<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/45921/cdn-public@main/app/gallery/base.css" /> -->
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;900&amp;display=swap" rel="stylesheet" media="all" onload="this.media=&quot;all&quot;">
 
 		<link rel="stylesheet" type="text/css" href="main.dev.css" />
@@ -235,10 +234,29 @@
 				</div>
 				<button class="overlay__close"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
 			</div>
+			
 		</main>
+
+		<div class="footer">
+			<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">Total visits to this site is <span id="busuanzi_value_site_pv"></span> times</span><br/>
+			<span>Welcome to <a href="https://shiraha.cn/">my blog</a> !</span><br/><br/>
+			<span>Copyright © 2017-2021 Nanami Shiraha</span>
+		</div>
+
 		<script src="https://cdn.jsdelivr.net/gh/45921/cdn-public@main/app/gallery/imagesloaded.pkgd.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/gh/45921/cdn-public@main/app/gallery/TweenMax.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/gh/45921/cdn-public@main/app/gallery/demo.js"></script>
-			
+		
 	</body>
+	<style>
+		.footer {
+			font-size: 1.1em;
+			color: gray;
+			font-family: 'Buenard', serif;
+			text-align: center;
+			position: relative;
+			padding-bottom: 4em;
+		}
+	</style>
 </html>
