@@ -274,6 +274,15 @@ main {
 	display: none;
 }
 
+.box__content--top { /* 仅适配 16:9 的 CG */
+	bottom: 12em;
+	max-width: 270px;
+}
+
+.box__content--top--high {	/* 这样处理不好 */
+	bottom: 14.4em;
+}
+
 .box__content--main {
     position: relative;
     font-size: 1.4rem;

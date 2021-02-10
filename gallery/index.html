@@ -10,19 +10,35 @@
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;900&amp;display=swap" rel="stylesheet" media="all" onload="this.media=&quot;all&quot;">
 
 		<link rel="stylesheet" type="text/css" href="main.dev.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/45921/cdn-public@main/app/gallery/base.min.css" /> -->
 
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
 
 	<body class="loading">
+
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="icon-cross" viewBox="0 0 24 23">
+				<title>cross</title>
+				<path d="M23.865 3.677c.197-.383.164-.818-.008-1.18.048-.41-.06-.827-.448-1.147L22.323.457c-.636-.524-1.632-.689-2.25 0a155.348 155.348 0 0 1-8.797 9.001C9.011 7.342 6.72 5.255 4.443 3.165c-.8-.734-1.956-.503-2.458.37C1.253 3.9.659 4.374.168 5.182c-.233.386-.215.872 0 1.258 1.47 2.635 4.31 4.951 6.646 7.083-.313.28-.623.562-.942.836-3.146 2.702-5.268 4.416-1.331 7.187.053.037.107.029.161.05.076.036.148.06.232.074.026 0 .05.005.075.003.082.007.16.027.243.011 2.117-.415 4.085-2.074 5.872-3.9 1.74 1.715 3.592 3.353 5.63 4.325.485.232 1.063.097 1.436-.227.626.047 1.197-.342 1.484-.901.042-.026.07-.041.116-.07.91-.569.993-1.701.32-2.482-1.522-1.762-3.138-3.438-4.787-5.084 2.968-2.9 6.674-6.027 8.542-9.667z"/>
+			</symbol>
+		</svg>
+
 		<main>
 			
 			<div class="content">
 				<div class="grid">
 					<a class="grid__item grid__item--noclick" href="#">
 						<div class="box">
-							<!-- <img class="box__img" src="https://7.dusays.com/2021/02/09/c0cc3a19bea97.png" alt="Kuro"/> -->
-							<h4 class="box__text"><span class="box__text-inner box__text-inner--reverse" onclick="window.open('https://shiraha.cn/')" >Gallery</span></h4>
+							<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2 box__text-inner--reverse" onclick="window.open('https://shiraha.cn/')" >Gallery</span></h4>
 							<p class="box__content box__content--main">Shiraha Nanami, a galgame lover.</p>
 							<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="ABOUT">ABOUT</span></h3>
 						</div>
@@ -30,7 +46,7 @@
 					<a class="grid__item" href="#preview-1">
 						<div class="box">
 							<div class="box__shadow"></div>
-							<img class="box__img" src="https://7.dusays.com/2021/02/09/c0cc3a19bea97.png" alt="Kuro"/>
+							<img class="box__img" src="https://7.dusays.com/2021/02/10/98cafc83d73be.png" alt="Kuro"/>
 							<h3 class="box__title"><span class="box__title-inner" data-hover="KURO">KURO</span></h3>
 							<h4 class="box__text"><span class="box__text-inner">Night</span></h4>
 							<div class="box__deco">&#10014;</div>
@@ -40,87 +56,95 @@
 					<a class="grid__item" href="#preview-2">
 						<div class="box">
 							<div class="box__shadow"></div>
-							<img class="box__img" src="https://7.dusays.com/2021/01/12/3b56ef6c777f2.jpg" alt="Some image"/>
-							<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="Gun">Gun</span></h3>
-							<h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Rain</span></h4>
+							<img class="box__img" src="https://i.loli.net/2021/02/10/puwq6xlIBO4PNEd.png" alt="yayaya"/>
+							<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="ANZU">ANZU</span></h3>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Clover</span></h4>
 							<div class="box__deco box__deco--top">&#10115;</div>
+							<p class="box__content box__content--top--high">"Looking for a clover day's"</p>
 						</div>
 					</a>
 					<a class="grid__item" href="#preview-3">
 						<div class="box">
 							<div class="box__shadow"></div>
-							<img class="box__img" src="https://7.dusays.com/2021/01/12/092cef8cf9779.jpg" alt="Some image"/>
-							<h3 class="box__title"><span class="box__title-inner" data-hover="West">West</span></h3>
-							<h4 class="box__text box__text--topcloser"><span class="box__text-inner">Green</span></h4>
+							<img class="box__img" src="https://7.dusays.com/2021/02/10/288afe01b8163.png" alt="yuuki"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="YUUKI">YUUKI</span></h3>
+							<h4 class="box__text box__text--topcloser"><span class="box__text-inner">White</span></h4>
 							<div class="box__deco">&#10032;</div>
+							<p class="box__content">"I believe we can see someday again white eternity..."</p>
 						</div>
 					</a>
 					<a class="grid__item" href="#preview-4">
 						<div class="box">
 							<div class="box__shadow"></div>
-							<img class="box__img" src="https://7.dusays.com/2021/01/12/4070ab6b46b37.jpg" alt="Some image"/>
-							<h3 class="box__title"><span class="box__title-inner" data-hover="Catch">Catch</span></h3>
-							<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Fire</span></h4>
+							<img class="box__img" src="https://7.dusays.com/2021/02/10/5c4fdc730c7e9.png" alt="sena"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="SENA">SENA</span></h3>
+							<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Letter</span></h4>
+							<p class="box__content box__content--top">"Our first promise and your words I wanted to express that day"</p>
 						</div>
 					</a>
 					<a class="grid__item" href="#preview-5">
 						<div class="box">
 							<div class="box__shadow"></div>
-							<img class="box__img" src="https://7.dusays.com/2021/02/09/c6c16ad74afa8.png" alt="Some image"/>
-							<h3 class="box__title"><span class="box__title-inner" data-hover="Lim">Lim</span></h3>
-							<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">Breed</span></h4>
+							<img class="box__img" src="https://7.dusays.com/2021/02/10/8bcbf0358e3e8.png" alt="romi"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="ROMI">ROMI</span></h3>
+							<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">Emotion</span></h4>
+							<p class="box__content box__content--top">"The only source of knowledge is experience."</p>
 						</div>
 					</a>
 					<a class="grid__item" href="#preview-6">
 						<div class="box">
 							<div class="box__shadow"></div>
-							<img class="box__img" src="https://cdn.jsdelivr.net/gh/w4j1e/blog@master/img/v2-6ebd0807a65d199f2d7e5b31b674616e_r.jpg" alt="Some image"/>
-							<h3 class="box__title"><span class="box__title-inner" data-hover="Hard">Hard</span></h3>
-							<h4 class="box__text"><span class="box__text-inner">Fast</span></h4>
-							<p class="box__content">"Love stronger, stranger! Love stronger."</p>
+							<img class="box__img" src="https://7.dusays.com/2021/02/10/1549657d4e7bb.png" alt="shiroha"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="SHIROHA">SHIROHA</span></h3>
+							<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated1">Butterfly</span></h4>
+							<p class="box__content">"Refection Blue"</p>
 						</div>
 					</a>
 					<a class="grid__item" href="#preview-7">
 						<div class="box">
 							<div class="box__shadow"></div>
-							<img class="box__img" src="https://7.dusays.com/2021/01/12/e4185250bb1c1.jpg" alt="Some image"/>
-							<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="Red">Red</span></h3>
-							<h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">Life</span></h4>
+							<img class="box__img" src="https://7.dusays.com/2021/02/10/ed7e1d7fb63ea.png" alt="sakura"/>
+							<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="SAKURA">SAKURA</span></h3>
+							<h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">Cherry</span></h4>
+							<p class="box__content box__content--top">"O wende, wende Deinen Lauf Im Thale blüht der Frühling auf!"</p>
 						</div>
 					</a>
 					<a class="grid__item" href="#preview-8">
 						<div class="box">
 							<div class="box__shadow"></div>
-							<img class="box__img" src="https://7.dusays.com/2021/01/12/8ae7af9ad9aff.jpg" alt="Some image"/>
-							<h3 class="box__title"><span class="box__title-inner" data-hover="Jack">Jack</span></h3>
-							<h4 class="box__text box__text--bottom"><span class="box__text-inner">Bust</span></h4>
+							<img class="box__img" src="https://7.dusays.com/2021/02/10/5c5e2f08704dc.png" alt="hiiro"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="HIIRO">HIIRO</span></h3>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner">Color</span></h4>
+							<p class="box__content box__content--top">"Our times made of dreams and colors"</p>
 							<div class="box__deco">&#10108;</div>
 						</div>
 					</a>
 					<a class="grid__item" href="#preview-9">
 						<div class="box">
 							<div class="box__shadow"></div>
-							<img class="box__img" src="https://7.dusays.com/2021/01/12/4c5ad0e072b6d.jpg" alt="Some image"/>
-							<h3 class="box__title"><span class="box__title-inner" data-hover="Wild">Wild</span></h3>
-							<h4 class="box__text box__text--bottom"><span class="box__text-inner">Zack</span></h4>
+							<img class="box__img" src="https://i.loli.net/2021/02/10/bYwuLmsrFc3ik5H.png" alt="kukuri"/>
+							<h3 class="box__title"><span class="box__title-inner" data-hover="KUKURI">KUKURI</span></h3>
+							<h4 class="box__text box__text--bottom"><span class="box__text-inner">Apple</span></h4>
+							<p class="box__content box__content--top">"The end of the story promises happy ending"</p>
 						</div>
 					</a>
 					<a class="grid__item" href="#preview-10">
 						<div class="box">
 							<div class="box__shadow"></div>
-							<img class="box__img" src="https://cdn.jsdelivr.net/gh/w4j1e/blog@master//img/10.jpg" alt="Some image"/>
-							<h3 class="box__title box__title--bottom"><span class="box__title-inner" data-hover="Lost">Lost</span></h3>
-							<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">Rust</span></h4>
-							<p class="box__content">"Call it a hurricane or call it freedom, Frank"</p>
+							<img class="box__img" src="https://7.dusays.com/2021/02/10/610f3c8d1c630.png" alt="aqua"/>
+							<h3 class="box__title box__title--bottom"><span class="box__title-inner" data-hover="AQUA">AQUA</span></h3>
+							<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">Sunflower</span></h4>
+							<p class="box__content">"That's one small step for mankind, one giant leap for a man."</p>
 						</div>
 					</a>
 					<a class="grid__item" href="#preview-11">
 						<div class="box">
 							<div class="box__shadow"></div>
-							<img class="box__img" src="https://7.dusays.com/2021/01/12/fea57da542114.jpg" alt="Some image"/>
-							<h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner" data-hover="Grit">Grit</span></h3>
-							<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Mud</span></h4>
+							<img class="box__img" src="https://7.dusays.com/2021/02/10/717e3e43adbe0.png" alt="mare"/>
+							<h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner" data-hover="MARE">MARE</span></h3>
+							<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">STAR</span></h4>
 							<div class="box__deco box__deco--top">&#10153;</div>
+							<p class="box__content" style="left: -2em">"Pray to become starry sky tomorrow..."</p>
 						</div>
 					</a>
 				</div>
@@ -131,106 +155,106 @@
 				<div class="overlay__item" id="preview-1">
 					<div class="box">
 						<div class="box__shadow"></div>
-						<img class="box__img box__img--original" src="https://7.dusays.com/2021/02/09/c0cc3a19bea97.png" alt="Kuro"/>
+						<img class="box__img box__img--original" src="https://7.dusays.com/2021/02/10/98cafc83d73be.png" alt="Kuro"/>
 						<h3 class="box__title"><span class="box__title-inner">KURO</span></h3>
 						<h4 class="box__text"><span class="box__text-inner">Night</span></h4>
 						<div class="box__deco">&#10014;</div>
 					</div>
-					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+					<p class="overlay__content">それは、幾千の夜を舞う，さくらと少女たちの物語——</p>
 				</div>
 				<div class="overlay__item" id="preview-2">
 					<div class="box">
 						<div class="box__shadow"></div>
-						<img class="box__img box__img--original" src="https://7.dusays.com/2021/01/12/3b56ef6c777f2.jpg" alt="Some image"/>
-						<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner">Gun</span></h3>
-						<h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Rain</span></h4>
+						<img class="box__img box__img--original" src="https://i.loli.net/2021/02/10/puwq6xlIBO4PNEd.png" alt="yayaya"/>
+						<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner">ANZU</span></h3>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Clover</span></h4>
 						<div class="box__deco box__deco--top">&#10115;</div>
 					</div>
-					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+					<p class="overlay__content">それは、忍ぶ想い<br/>それは、永遠の誓い<br/>それは、心からの願い<br/>それは、抱き続けた後悔<br/>そして、幼い日の約束――</p>
 				</div>
 				<div class="overlay__item" id="preview-3">
 					<div class="box">
 						<div class="box__shadow"></div>
-						<img class="box__img box__img--original" src="https://7.dusays.com/2021/01/12/092cef8cf9779.jpg" alt="Some image"/>
-						<h3 class="box__title"><span class="box__title-inner">West</span></h3>
-						<h4 class="box__text box__text--topcloser"><span class="box__text-inner">Green</span></h4>
+						<img class="box__img box__img--original" src="https://7.dusays.com/2021/02/10/288afe01b8163.png" alt="yuuki"/>
+						<h3 class="box__title"><span class="box__title-inner">YUUKI</span></h3>
+						<h4 class="box__text box__text--topcloser"><span class="box__text-inner">White</span></h4>
 						<div class="box__deco">&#10032;</div>
 					</div>
-					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+					<p class="overlay__content">今日もまだ、春の訪れを予感しながら、冬の想い出を見上げている。</p>
 				</div>
 				<div class="overlay__item" id="preview-4">
 					<div class="box">
 						<div class="box__shadow"></div>
-						<img class="box__img box__img--original" src="https://7.dusays.com/2021/01/12/4070ab6b46b37.jpg" alt="Some image"/>
-						<h3 class="box__title"><span class="box__title-inner">Catch</span></h3>
-						<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Fire</span></h4>
+						<img class="box__img box__img--original" src="https://7.dusays.com/2021/02/10/5c4fdc730c7e9.png" alt="sena"/>
+						<h3 class="box__title"><span class="box__title-inner">SENA</span></h3>
+						<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Letter</span></h4>
 					</div>
-					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+					<p class="overlay__content">私が戻ってきたのはね。もう一度、星の音を聞きためだよ</p>
 				</div>
 				<div class="overlay__item" id="preview-5">
 					<div class="box">
 						<div class="box__shadow"></div>
-						<img class="box__img box__img--original" src="https://7.dusays.com/2021/02/09/c6c16ad74afa8.png" alt="Some image"/>
-						<h3 class="box__title"><span class="box__title-inner">Lim</span></h3>
-						<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">Breed</span></h4>
+						<img class="box__img box__img--original" src="https://7.dusays.com/2021/02/10/8bcbf0358e3e8.png" alt="romi"/>
+						<h3 class="box__title"><span class="box__title-inner">ROMI</span></h3>
+						<h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">Emotion</span></h4>
 					</div>
-					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+					<p class="overlay__content">恋はとこからきて、どこに行くだろう——</p>
 				</div>
 				<div class="overlay__item" id="preview-6">
 					<div class="box">
 						<div class="box__shadow"></div>
-						<img class="box__img box__img--original" src="https://cdn.jsdelivr.net/gh/w4j1e/blog@master/img/v2-6ebd0807a65d199f2d7e5b31b674616e_r.jpg" alt="Some image"/>
-						<h3 class="box__title"><span class="box__title-inner">Hard</span></h3>
-						<h4 class="box__text"><span class="box__text-inner">Fast</span></h4>
+						<img class="box__img box__img--original" src="https://7.dusays.com/2021/02/10/1549657d4e7bb.png" alt="shiroha"/>
+						<h3 class="box__title"><span class="box__title-inner">SHIROHA</span></h3>
+						<h4 class="box__text"><span class="box__text-inner">Butterfly</span></h4>
 					</div>
-					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+					<p class="overlay__content">眩しさだけは、忘れなかった。<br />どんな時も——夏の青さを、覚えていた。</p>
 				</div>
 				<div class="overlay__item" id="preview-7">
 					<div class="box">
 						<div class="box__shadow"></div>
-						<img class="box__img box__img--original" src="https://7.dusays.com/2021/01/12/e4185250bb1c1.jpg" alt="Some image"/>
-						<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner">Red</span></h3>
-						<h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">Life</span></h4>
+						<img class="box__img box__img--original" src="https://7.dusays.com/2021/02/10/ed7e1d7fb63ea.png" alt="sakura"/>
+						<h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner">SAKURA</span></h3>
+						<h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">Cherry</span></h4>
 					</div>
-					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+					<p class="overlay__content">ああ、世界はこんなにも美しい——そんな幸せな景色</p>
 				</div>
 				<div class="overlay__item" id="preview-8">
 					<div class="box">
 						<div class="box__shadow"></div>
-						<img class="box__img box__img--original" src="https://7.dusays.com/2021/01/12/8ae7af9ad9aff.jpg" alt="Some image"/>
-						<h3 class="box__title"><span class="box__title-inner">Jack</span></h3>
-						<h4 class="box__text box__text--bottom"><span class="box__text-inner">Bust</span></h4>
+						<img class="box__img box__img--original" src="https://7.dusays.com/2021/02/10/5c5e2f08704dc.png" alt="hiiro"/>
+						<h3 class="box__title"><span class="box__title-inner">HIIRO</span></h3>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner">Color</span></h4>
 						<div class="box__deco">&#10108;</div>
 					</div>
-					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+					<p class="overlay__content">ともあれ、これが俺たちの青春の１ページ——</p>
 				</div>
 				<div class="overlay__item" id="preview-9">
 					<div class="box">
 						<div class="box__shadow"></div>
-						<img class="box__img box__img--original" src="https://7.dusays.com/2021/01/12/4c5ad0e072b6d.jpg" alt="Some image"/>
-						<h3 class="box__title"><span class="box__title-inner">Wild</span></h3>
-						<h4 class="box__text box__text--bottom"><span class="box__text-inner">Zack</span></h4>
+						<img class="box__img box__img--original" src="https://i.loli.net/2021/02/10/bYwuLmsrFc3ik5H.png" alt="kukuri"/>
+						<h3 class="box__title"><span class="box__title-inner">KUKURI</span></h3>
+						<h4 class="box__text box__text--bottom"><span class="box__text-inner">Apple</span></h4>
 					</div>
-					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+					<p class="overlay__content">——ハッピーエンドを約束しよう</p>
 				</div>
 				<div class="overlay__item" id="preview-10">
 					<div class="box">
 						<div class="box__shadow"></div>
-						<img class="box__img box__img--original" src="https://cdn.jsdelivr.net/gh/w4j1e/blog@master/img/10.jpg" alt="Some image"/>
-						<h3 class="box__title box__title--bottom"><span class="box__title-inner">Lost</span></h3>
-						<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">Rust</span></h4>
+						<img class="box__img box__img--original" src="https://7.dusays.com/2021/02/10/610f3c8d1c630.png" alt="aqua"/>
+						<h3 class="box__title box__title--bottom"><span class="box__title-inner">AQUA</span></h3>
+						<h4 class="box__text"><span class="box__text-inner box__text-inner--rotated2">Sunflower</span></h4>
 					</div>
-					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+					<p class="overlay__content">——この星の空は、<br />何故あおいのだろう——</p>
 				</div>
 				<div class="overlay__item" id="preview-11">
 					<div class="box">
 						<div class="box__shadow"></div>
-						<img class="box__img box__img--original" src="https://7.dusays.com/2021/01/12/fea57da542114.jpg" alt="Some image"/>
-						<h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner">Grit</span></h3>
-						<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">Mud</span></h4>
+						<img class="box__img box__img--original" src="https://7.dusays.com/2021/02/10/717e3e43adbe0.png" alt="mare"/>
+						<h3 class="box__title box__title--straight box__title--left"><span class="box__title-inner">MARE</span></h3>
+						<h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">STAR</span></h4>
 						<div class="box__deco box__deco--top">&#10153;</div>
 					</div>
-					<p class="overlay__content">It's time the tale were told of how you took a child and you made him old.</p>
+					<p class="overlay__content">変わらない星空の下、俺たちは変わっていく——<br />流れ星に願った夢、叶えようとしてますか——？</p>
 				</div>
 				<button class="overlay__close"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
 			</div>
