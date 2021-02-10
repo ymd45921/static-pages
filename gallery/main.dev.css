@@ -274,13 +274,9 @@ main {
 	display: none;
 }
 
-.box__content--top { /* 仅适配 16:9 的 CG */
-	bottom: 12em;
+.box__content--top {
+	bottom: 105%;
 	max-width: 270px;
-}
-
-.box__content--top--high {	/* 这样处理不好 */
-	bottom: 14.4em;
 }
 
 .box__content--main {
@@ -470,7 +466,7 @@ main {
 	}
 	.grid__item:nth-child(4n-2) {
 		margin-top: -6rem;
-		margin-bottom: 6rem;
+		margin-bottom: 2rem;
 	}
 	.grid__item:nth-child(4n) {
 		margin-top: -3rem;
