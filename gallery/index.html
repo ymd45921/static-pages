@@ -12,6 +12,8 @@
 		<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/45921/cdn-public@main/app/gallery/base.min.css" /> -->
 		<link rel="stylesheet" type="text/css" href="/gallery/main.dev.css" />
 
+		<script src="/gallery/jquery.js"></script>
+		<script async src="/gallery/busuanzi.modified.js"></script>
 
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
@@ -263,8 +265,9 @@
 		</main>
 
 		<div class="footer">
-			<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+			<span id="busuanzi_container_site_pv">Total visits to this site is <span id="busuanzi_value_site_pv"></span> times</span><br/>
             <span id="busuanzi_container_site_pv">Total visits to this site is <span id="busuanzi_value_site_pv"></span> times</span><br/>
+			
 			<span>Welcome to <a href="https://shiraha.cn/">my blog</a> !</span><br/><br/>
 			<span>Copyright © 2017-2021 Nanami Shiraha</span>
 		</div>
