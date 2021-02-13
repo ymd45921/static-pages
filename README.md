@@ -12,12 +12,12 @@
 
 本仓库下现在包含的独立页面，截止于 2021/02/10 更新：
 
-| 名称               | 目录                           | 部署地址 |
-| ------------------ | ------------------------------ | -------- |
-| 黄油画廊           | [*](gallery/index.html)        |          |
-| UTSC 3D 元素周期表 | [*](periodic-table/index.html) |          |
-| 魔方游戏           | [*](rubiks-cube/index.html)    |          |
-| 404 Page           | [*](404.html)                  |          |
+| 名称               | 目录                           | 部署地址                                |
+| ------------------ | ------------------------------ | --------------------------------------- |
+| 黄油画廊           | [*](gallery/index.html)        | https://pages.shiraha.cn/gallery        |
+| UTSC 3D 元素周期表 | [*](periodic-table/index.html) | https://pages.shiraha.cn/periodic-table |
+| 魔方游戏           | [*](rubiks-cube/index.html)    | https://pages.shiraha.cn/rubiks-cube    |
+| 404 Page           | [*](404.html)                  | https://pages.shiraha.cn/404.html       |
 
 
 
@@ -26,3 +26,5 @@
 ### v0.0.1
 
 收录了自己修改的画廊、魔方、UTSC 3D 元素周期表以及一个有点意思的 404 页面；可能还缺乏一个像这个 MD 一样的更加像模像样的 `index.html`，但是倒也问题不大；本来还想收录一个 MikuTap 的，毕竟它非常的花里胡哨——但是那个感觉有点意义不明，而且我也不会改动些什么==
+
+UPD - `busuanzi` 二次开发：关联到 Vercel 之后好像每次推送——即使不是 `main` 分支的更新也会被自动地 Deploy，，并且还会保留旧版本，有一点恶心啊（）之后得想点办法解决一下，看着一堆老的 Deployment 就非常的烦躁，，看来以后还是不能用这个仓库作为开发实验仓库啊，反正仓库不嫌多，可以再建一个别的（
