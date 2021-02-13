@@ -62,29 +62,23 @@ bszTag = {
 	bszs: ["site_pv", "page_pv", "site_uv"],
 	texts: function(a) {
 		this.bszs.map(function(b) {
-			var c = document.getElementById("busuanzi_value_" + b);
-			c && (c.innerHTML = a[b])
-			var id = "busuanzi_value_" + b;
-			document.all[id].innerHTML = a[b];
-			console.log(b, a[b])
-			if (typeof jQuery != 'undefined') {
-				console.log("jquery已经被加载");
-			} else {
-				console.log("jquery没有被加载");
-			}
-			$("#" + "busuanzi_value_" + b).html(a[b])
+			const id = "busuanzi_value_" + b;
+			var res = document.querySelectorAll("#" + id);
+			res.forEach((el, i, par) => {el.innerHTML = a[b]})
 		})
 	},
 	hides: function() {
 		this.bszs.map(function(a) {
-			var b = document.getElementById("busuanzi_container_" + a);
-			b && (b.style.display = "none")
+			const id = "busuanzi_container_" + a;
+			var res = document.querySelectorAll("#" + id);
+			res.forEach((el, i, par) => {el.style.display = "none"})
 		})
 	},
 	shows: function() {
 		this.bszs.map(function(a) {
-			var b = document.getElementById("busuanzi_container_" + a);
-			b && (b.style.display = "inline")
+			const id = "busuanzi_container_" + a;
+			var res = document.querySelectorAll("#" + id);
+			res.forEach((el, i, par) => {el.style.display = "inline"})
 		})
 	}
 };
