@@ -18,6 +18,8 @@
 | UTSC 3D 元素周期表 | [*](periodic-table/index.html) | https://pages.shiraha.cn/periodic-table |
 | 魔方游戏           | [*](rubiks-cube/index.html)    | https://pages.shiraha.cn/rubiks-cube    |
 | 404 Page           | [*](404.html)                  | https://pages.shiraha.cn/404.html       |
+| 调色板 Pure Color  | [*](color/index.html)          | https://pages.shiraha.cn/color          |
+| IPFS 文件上传/获取 | [*](ipfs/index.html)           | https://pages.shiraha.cn/ipfs           |
 
 
 

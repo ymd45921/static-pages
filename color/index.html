@@ -1,0 +1,428 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Pure · Color</title>
+		<link href="color/css/style.css" type='text/css' rel='stylesheet'>
+		<script src="color/js/vue.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300&display=swap" rel="stylesheet">
+		<script src="color/js/jquery-3.4.1.min.js"></script>
+		<script src="color/js/main.js"></script>
+	</head>
+	<style id="now_color_definition">
+		:root{
+			--color: #5e72e4;
+			--color-rgb: 94, 114, 228;
+		}
+	</style>
+	<style id="mobile_color_group_container_padding_definition">
+		:root{
+			--mobile-color-group-container-padding: 0px;
+		}
+	</style>
+	<script>
+	var color_json = 
+	[
+		{
+			"name": "Argon",
+			"colors": [
+				{"hex": "#5e72e4" , "name": "Argon"}
+			],
+			"autosort" : false
+		},
+		{
+			"name": "Material Standard Colors",
+			"colors": [
+				{"hex": "#F44336" , "name": "Red"},
+				{"hex": "#E91E63" , "name": "Pink"},
+				{"hex": "#9C27B0" , "name": "Purple"},
+				{"hex": "#673AB7" , "name": "Deep Purple"},
+				{"hex": "#3F51B5" , "name": "Indigo"},
+				{"hex": "#2196F3" , "name": "Blue"},
+				{"hex": "#03A9F4" , "name": "Light Blue"},
+				{"hex": "#00BCD4" , "name": "Cyan"},
+				{"hex": "#009688" , "name": "Teal"},
+				{"hex": "#4CAF50" , "name": "Green"},
+				{"hex": "#8BC34A" , "name": "Light Green"},
+				{"hex": "#CDDC39" , "name": "Lime"},
+				{"hex": "#FFEB3B" , "name": "Yellow"},
+				{"hex": "#FFC107" , "name": "Amber"},
+				{"hex": "#FF9800" , "name": "Orange"},
+				{"hex": "#FF5722" , "name": "Deep Orange"},
+				{"hex": "#795548" , "name": "Brown"},
+				{"hex": "#9E9E9E" , "name": "Grey"},
+				{"hex": "#607D8B" , "name": "Blue Grey"}
+			],
+			"autosort" : false
+		},
+		
+		{
+        "name": "Red Material Design",
+        "colors": [{'hex': '#ffebee', 'name': '#ffebee'}, {'hex': '#ffcdd2', 'name': '#ffcdd2'}, {'hex': '#ef9a9a', 'name': '#ef9a9a'}, {'hex': '#e57373', 'name': '#e57373'}, {'hex': '#ef5350', 'name': '#ef5350'}, {'hex': '#f44336', 'name': '#f44336'}, {'hex': '#e53935', 'name': '#e53935'}, {'hex': '#d32f2f', 'name': '#d32f2f'}, {'hex': '#c62828', 'name': '#c62828'}, {'hex': '#b71c1c', 'name': '#b71c1c'}, {'hex': '#ff8a80', 'name': '#ff8a80'}, {'hex': '#ff5252', 'name': '#ff5252'}, {'hex': '#ff1744', 'name': '#ff1744'}, {'hex': '#d50000', 'name': '#d50000'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Pink Material Design",
+        "colors": [{'hex': '#fce4ec', 'name': '#fce4ec'}, {'hex': '#f8bbd0', 'name': '#f8bbd0'}, {'hex': '#f48fb1', 'name': '#f48fb1'}, {'hex': '#f06292', 'name': '#f06292'}, {'hex': '#ec407a', 'name': '#ec407a'}, {'hex': '#e91e63', 'name': '#e91e63'}, {'hex': '#d81b60', 'name': '#d81b60'}, {'hex': '#c2185b', 'name': '#c2185b'}, {'hex': '#ad1457', 'name': '#ad1457'}, {'hex': '#880e4f', 'name': '#880e4f'}, {'hex': '#ff80ab', 'name': '#ff80ab'}, {'hex': '#ff4081', 'name': '#ff4081'}, {'hex': '#f50057', 'name': '#f50057'}, {'hex': '#c51162', 'name': '#c51162'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Purple Material Design",
+        "colors": [{'hex': '#f3e5f5', 'name': '#f3e5f5'}, {'hex': '#e1bee7', 'name': '#e1bee7'}, {'hex': '#ce93d8', 'name': '#ce93d8'}, {'hex': '#ba68c8', 'name': '#ba68c8'}, {'hex': '#ab47bc', 'name': '#ab47bc'}, {'hex': '#9c27b0', 'name': '#9c27b0'}, {'hex': '#8e24aa', 'name': '#8e24aa'}, {'hex': '#7b1fa2', 'name': '#7b1fa2'}, {'hex': '#6a1b9a', 'name': '#6a1b9a'}, {'hex': '#4a148c', 'name': '#4a148c'}, {'hex': '#ea80fc', 'name': '#ea80fc'}, {'hex': '#e040fb', 'name': '#e040fb'}, {'hex': '#d500f9', 'name': '#d500f9'}, {'hex': '#aa00ff', 'name': '#aa00ff'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Deep purple Material Design",
+        "colors": [{'hex': '#ede7f6', 'name': '#ede7f6'}, {'hex': '#d1c4e9', 'name': '#d1c4e9'}, {'hex': '#b39ddb', 'name': '#b39ddb'}, {'hex': '#9575cd', 'name': '#9575cd'}, {'hex': '#7e57c2', 'name': '#7e57c2'}, {'hex': '#673ab7', 'name': '#673ab7'}, {'hex': '#5e35b1', 'name': '#5e35b1'}, {'hex': '#512da8', 'name': '#512da8'}, {'hex': '#4527a0', 'name': '#4527a0'}, {'hex': '#311b92', 'name': '#311b92'}, {'hex': '#b388ff', 'name': '#b388ff'}, {'hex': '#7c4dff', 'name': '#7c4dff'}, {'hex': '#651fff', 'name': '#651fff'}, {'hex': '#6200ea', 'name': '#6200ea'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Indigo Material Design",
+        "colors": [{'hex': '#e8eaf6', 'name': '#e8eaf6'}, {'hex': '#c5cae9', 'name': '#c5cae9'}, {'hex': '#9fa8da', 'name': '#9fa8da'}, {'hex': '#7986cb', 'name': '#7986cb'}, {'hex': '#5c6bc0', 'name': '#5c6bc0'}, {'hex': '#3f51b5', 'name': '#3f51b5'}, {'hex': '#3949ab', 'name': '#3949ab'}, {'hex': '#303f9f', 'name': '#303f9f'}, {'hex': '#283593', 'name': '#283593'}, {'hex': '#1a237e', 'name': '#1a237e'}, {'hex': '#8c9eff', 'name': '#8c9eff'}, {'hex': '#536dfe', 'name': '#536dfe'}, {'hex': '#3d5afe', 'name': '#3d5afe'}, {'hex': '#304ffe', 'name': '#304ffe'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Blue Material Design",
+        "colors": [{'hex': '#e3f2fd', 'name': '#e3f2fd'}, {'hex': '#bbdefb', 'name': '#bbdefb'}, {'hex': '#90caf9', 'name': '#90caf9'}, {'hex': '#64b5f6', 'name': '#64b5f6'}, {'hex': '#42a5f5', 'name': '#42a5f5'}, {'hex': '#2196f3', 'name': '#2196f3'}, {'hex': '#1e88e5', 'name': '#1e88e5'}, {'hex': '#1976d2', 'name': '#1976d2'}, {'hex': '#1565c0', 'name': '#1565c0'}, {'hex': '#0d47a1', 'name': '#0d47a1'}, {'hex': '#82b1ff', 'name': '#82b1ff'}, {'hex': '#448aff', 'name': '#448aff'}, {'hex': '#2979ff', 'name': '#2979ff'}, {'hex': '#2962ff', 'name': '#2962ff'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Light blue Material Design",
+        "colors": [{'hex': '#e1f5fe', 'name': '#e1f5fe'}, {'hex': '#b3e5fc', 'name': '#b3e5fc'}, {'hex': '#81d4fa', 'name': '#81d4fa'}, {'hex': '#4fc3f7', 'name': '#4fc3f7'}, {'hex': '#29b6f6', 'name': '#29b6f6'}, {'hex': '#03a9f4', 'name': '#03a9f4'}, {'hex': '#039be5', 'name': '#039be5'}, {'hex': '#0288d1', 'name': '#0288d1'}, {'hex': '#0277bd', 'name': '#0277bd'}, {'hex': '#01579b', 'name': '#01579b'}, {'hex': '#80d8ff', 'name': '#80d8ff'}, {'hex': '#40c4ff', 'name': '#40c4ff'}, {'hex': '#00b0ff', 'name': '#00b0ff'}, {'hex': '#0091ea', 'name': '#0091ea'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Cyan Material Design",
+        "colors": [{'hex': '#e0f7fa', 'name': '#e0f7fa'}, {'hex': '#b2ebf2', 'name': '#b2ebf2'}, {'hex': '#80deea', 'name': '#80deea'}, {'hex': '#4dd0e1', 'name': '#4dd0e1'}, {'hex': '#26c6da', 'name': '#26c6da'}, {'hex': '#00bcd4', 'name': '#00bcd4'}, {'hex': '#00acc1', 'name': '#00acc1'}, {'hex': '#0097a7', 'name': '#0097a7'}, {'hex': '#00838f', 'name': '#00838f'}, {'hex': '#006064', 'name': '#006064'}, {'hex': '#84ffff', 'name': '#84ffff'}, {'hex': '#18ffff', 'name': '#18ffff'}, {'hex': '#00e5ff', 'name': '#00e5ff'}, {'hex': '#00b8d4', 'name': '#00b8d4'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Teal Material Design",
+        "colors": [{'hex': '#e0f2f1', 'name': '#e0f2f1'}, {'hex': '#b2dfdb', 'name': '#b2dfdb'}, {'hex': '#80cbc4', 'name': '#80cbc4'}, {'hex': '#4db6ac', 'name': '#4db6ac'}, {'hex': '#26a69a', 'name': '#26a69a'}, {'hex': '#009688', 'name': '#009688'}, {'hex': '#00897b', 'name': '#00897b'}, {'hex': '#00796b', 'name': '#00796b'}, {'hex': '#00695c', 'name': '#00695c'}, {'hex': '#004d40', 'name': '#004d40'}, {'hex': '#a7ffeb', 'name': '#a7ffeb'}, {'hex': '#64ffda', 'name': '#64ffda'}, {'hex': '#1de9b6', 'name': '#1de9b6'}, {'hex': '#00bfa5', 'name': '#00bfa5'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Green Material Design",
+        "colors": [{'hex': '#e8f5e9', 'name': '#e8f5e9'}, {'hex': '#c8e6c9', 'name': '#c8e6c9'}, {'hex': '#a5d6a7', 'name': '#a5d6a7'}, {'hex': '#81c784', 'name': '#81c784'}, {'hex': '#66bb6a', 'name': '#66bb6a'}, {'hex': '#4caf50', 'name': '#4caf50'}, {'hex': '#43a047', 'name': '#43a047'}, {'hex': '#388e3c', 'name': '#388e3c'}, {'hex': '#2e7d32', 'name': '#2e7d32'}, {'hex': '#1b5e20', 'name': '#1b5e20'}, {'hex': '#b9f6ca', 'name': '#b9f6ca'}, {'hex': '#69f0ae', 'name': '#69f0ae'}, {'hex': '#00e676', 'name': '#00e676'}, {'hex': '#00c853', 'name': '#00c853'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Light green Material Design",
+        "colors": [{'hex': '#f1f8e9', 'name': '#f1f8e9'}, {'hex': '#dcedc8', 'name': '#dcedc8'}, {'hex': '#c5e1a5', 'name': '#c5e1a5'}, {'hex': '#aed581', 'name': '#aed581'}, {'hex': '#9ccc65', 'name': '#9ccc65'}, {'hex': '#8bc34a', 'name': '#8bc34a'}, {'hex': '#7cb342', 'name': '#7cb342'}, {'hex': '#689f38', 'name': '#689f38'}, {'hex': '#558b2f', 'name': '#558b2f'}, {'hex': '#33691e', 'name': '#33691e'}, {'hex': '#ccff90', 'name': '#ccff90'}, {'hex': '#b2ff59', 'name': '#b2ff59'}, {'hex': '#76ff03', 'name': '#76ff03'}, {'hex': '#64dd17', 'name': '#64dd17'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Lime Material Design",
+        "colors": [{'hex': '#f9fbe7', 'name': '#f9fbe7'}, {'hex': '#f0f4c3', 'name': '#f0f4c3'}, {'hex': '#e6ee9c', 'name': '#e6ee9c'}, {'hex': '#dce775', 'name': '#dce775'}, {'hex': '#d4e157', 'name': '#d4e157'}, {'hex': '#cddc39', 'name': '#cddc39'}, {'hex': '#c0ca33', 'name': '#c0ca33'}, {'hex': '#afb42b', 'name': '#afb42b'}, {'hex': '#9e9d24', 'name': '#9e9d24'}, {'hex': '#827717', 'name': '#827717'}, {'hex': '#f4ff81', 'name': '#f4ff81'}, {'hex': '#eeff41', 'name': '#eeff41'}, {'hex': '#c6ff00', 'name': '#c6ff00'}, {'hex': '#aeea00', 'name': '#aeea00'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Yellow Material Design",
+        "colors": [{'hex': '#fffde7', 'name': '#fffde7'}, {'hex': '#fff9c4', 'name': '#fff9c4'}, {'hex': '#fff59d', 'name': '#fff59d'}, {'hex': '#fff176', 'name': '#fff176'}, {'hex': '#ffee58', 'name': '#ffee58'}, {'hex': '#ffeb3b', 'name': '#ffeb3b'}, {'hex': '#fdd835', 'name': '#fdd835'}, {'hex': '#fbc02d', 'name': '#fbc02d'}, {'hex': '#f9a825', 'name': '#f9a825'}, {'hex': '#f57f17', 'name': '#f57f17'}, {'hex': '#ffff8d', 'name': '#ffff8d'}, {'hex': '#ffff00', 'name': '#ffff00'}, {'hex': '#ffea00', 'name': '#ffea00'}, {'hex': '#ffd600', 'name': '#ffd600'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Amber Material Design",
+        "colors": [{'hex': '#fff8e1', 'name': '#fff8e1'}, {'hex': '#ffecb3', 'name': '#ffecb3'}, {'hex': '#ffe082', 'name': '#ffe082'}, {'hex': '#ffd54f', 'name': '#ffd54f'}, {'hex': '#ffca28', 'name': '#ffca28'}, {'hex': '#ffc107', 'name': '#ffc107'}, {'hex': '#ffb300', 'name': '#ffb300'}, {'hex': '#ffa000', 'name': '#ffa000'}, {'hex': '#ff8f00', 'name': '#ff8f00'}, {'hex': '#ff6f00', 'name': '#ff6f00'}, {'hex': '#ffe57f', 'name': '#ffe57f'}, {'hex': '#ffd740', 'name': '#ffd740'}, {'hex': '#ffc400', 'name': '#ffc400'}, {'hex': '#ffab00', 'name': '#ffab00'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Orange Material Design",
+        "colors": [{'hex': '#fff3e0', 'name': '#fff3e0'}, {'hex': '#ffe0b2', 'name': '#ffe0b2'}, {'hex': '#ffcc80', 'name': '#ffcc80'}, {'hex': '#ffb74d', 'name': '#ffb74d'}, {'hex': '#ffa726', 'name': '#ffa726'}, {'hex': '#ff9800', 'name': '#ff9800'}, {'hex': '#fb8c00', 'name': '#fb8c00'}, {'hex': '#f57c00', 'name': '#f57c00'}, {'hex': '#ef6c00', 'name': '#ef6c00'}, {'hex': '#e65100', 'name': '#e65100'}, {'hex': '#ffd180', 'name': '#ffd180'}, {'hex': '#ffab40', 'name': '#ffab40'}, {'hex': '#ff9100', 'name': '#ff9100'}, {'hex': '#ff6d00', 'name': '#ff6d00'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Deep orange Material Design",
+        "colors": [{'hex': '#fbe9e7', 'name': '#fbe9e7'}, {'hex': '#ffccbc', 'name': '#ffccbc'}, {'hex': '#ffab91', 'name': '#ffab91'}, {'hex': '#ff8a65', 'name': '#ff8a65'}, {'hex': '#ff7043', 'name': '#ff7043'}, {'hex': '#ff5722', 'name': '#ff5722'}, {'hex': '#f4511e', 'name': '#f4511e'}, {'hex': '#e64a19', 'name': '#e64a19'}, {'hex': '#d84315', 'name': '#d84315'}, {'hex': '#bf360c', 'name': '#bf360c'}, {'hex': '#ff9e80', 'name': '#ff9e80'}, {'hex': '#ff6e40', 'name': '#ff6e40'}, {'hex': '#ff3d00', 'name': '#ff3d00'}, {'hex': '#dd2c00', 'name': '#dd2c00'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Brown Material Design",
+        "colors": [{'hex': '#efebe9', 'name': '#efebe9'}, {'hex': '#d7ccc8', 'name': '#d7ccc8'}, {'hex': '#bcaaa4', 'name': '#bcaaa4'}, {'hex': '#a1887f', 'name': '#a1887f'}, {'hex': '#8d6e63', 'name': '#8d6e63'}, {'hex': '#795548', 'name': '#795548'}, {'hex': '#6d4c41', 'name': '#6d4c41'}, {'hex': '#5d4037', 'name': '#5d4037'}, {'hex': '#4e342e', 'name': '#4e342e'}, {'hex': '#3e2723', 'name': '#3e2723'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Grey Material Design",
+        "colors": [{'hex': '#fafafa', 'name': '#fafafa'}, {'hex': '#f5f5f5', 'name': '#f5f5f5'}, {'hex': '#eeeeee', 'name': '#eeeeee'}, {'hex': '#e0e0e0', 'name': '#e0e0e0'}, {'hex': '#bdbdbd', 'name': '#bdbdbd'}, {'hex': '#9e9e9e', 'name': '#9e9e9e'}, {'hex': '#757575', 'name': '#757575'}, {'hex': '#616161', 'name': '#616161'}, {'hex': '#424242', 'name': '#424242'}, {'hex': '#212121', 'name': '#212121'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "Blue grey Material Design",
+        "colors": [{'hex': '#eceff1', 'name': '#eceff1'}, {'hex': '#cfd8dc', 'name': '#cfd8dc'}, {'hex': '#b0bec5', 'name': '#b0bec5'}, {'hex': '#90a4ae', 'name': '#90a4ae'}, {'hex': '#78909c', 'name': '#78909c'}, {'hex': '#607d8b', 'name': '#607d8b'}, {'hex': '#546e7a', 'name': '#546e7a'}, {'hex': '#455a64', 'name': '#455a64'}, {'hex': '#37474f', 'name': '#37474f'}, {'hex': '#263238', 'name': '#263238'}],
+        "autosort" : false
+    },
+    
+
+    {
+        "name": "White Material Design",
+        "colors": [{'hex': '#ffffff', 'name': '#ffffff'}, {'hex': '#000000', 'name': '#000000'}],
+        "autosort" : false
+    },
+    
+
+		{
+			"name": "清新",
+			"colors": [
+				{"hex": "#cb7574" , "name": "石红"},
+				{"hex": "#ec8a64" , "name": "橘橙"},
+				{"hex": "#f7c280" , "name": "浅杏"},
+				{"hex": "#dfe291" , "name": "酪黄"},
+				{"hex": "#aae2b1" , "name": "明绿"},
+				{"hex": "#97c3c6" , "name": "浅葱"},
+				{"hex": "#95c7e0" , "name": "秋波"},
+				{"hex": "#9aaec7" , "name": "雾霾"},
+				{"hex": "#99a5cd" , "name": "山梗"},
+				{"hex": "#b99ed3" , "name": "藤萝"},
+				{"hex": "#f48fb1" , "name": "嫩粉"},
+				{"hex": "#ddb5be" , "name": "石蕊"},
+				{"hex": "#bbb9ba" , "name": "亚麻"},
+				{"hex": "#f5ece7" , "name": "珍珠"},
+			],
+			"autosort" : false
+		},
+		{
+			"name": "Rainbow",
+			"colors": [
+				{"hex": "#7e79e2" , "name": "薰衣草"},
+				{"hex": "#627abc" , "name": "深蓝色"},
+				{"hex": "#1197cf" , "name": "亮蓝色"},
+				{"hex": "#85cefb" , "name": "蓝色"},
+				{"hex": "#5ea8c1" , "name": "烟灰蓝"},
+				{"hex": "#3cc4c5" , "name": "夏日绿"},
+				{"hex": "#92e3da" , "name": "蓝绿色"},
+				{"hex": "#9fdc96" , "name": "绿色"},
+				{"hex": "#c9e472" , "name": "柑橘绿"},
+				{"hex": "#f7ff98" , "name": "柠檬黄"},
+				{"hex": "#eedd68" , "name": "黄色"},
+				{"hex": "#febb41" , "name": "金色"},
+				{"hex": "#f7a97b" , "name": "杏橙色"},
+				{"hex": "#ec8a64" , "name": "金红色"},
+				{"hex": "#eb686d" , "name": "珊瑚粉"},
+				{"hex": "#f74449" , "name": "红色"},
+				{"hex": "#e1534a" , "name": "朱红色"},
+				{"hex": "#c92642" , "name": "深红色"},
+				{"hex": "#ee9cb3" , "name": "粉色"},
+				{"hex": "#da6da1" , "name": "赤紫色"},
+				{"hex": "#a86fc7" , "name": "紫色"},
+				{"hex": "#9b80a9" , "name": "灰紫色"},
+				{"hex": "#b3b2b7" , "name": "灰色"},
+				{"hex": "#636267" , "name": "深灰色"},
+				{"hex": "#68574f" , "name": "棕色"}
+			],
+			"autosort" : false
+		},
+		{
+			"name": "Colourful",
+			"colors": [
+				{"hex": "subtitle" , "name": "Light"},
+				{"hex": "#ffaab2" , "name": "荧光粉"},
+				{"hex": "#ffbbb0" , "name": "荧光橙"},
+				{"hex": "#f4f597" , "name": "荧光黄"},
+				{"hex": "#acd7b7" , "name": "荧光绿"},
+				{"hex": "#a2c1de" , "name": "荧光蓝"},
+				{"hex": "#c5b8d1" , "name": "荧光紫"},
+				{"hex": "subtitle" , "name": "Mild"},
+				{"hex": "#ef8f91" , "name": "樱红"},
+				{"hex": "#e1bd4b" , "name": "金黄"},
+				{"hex": "#b2c16f" , "name": "苹果绿"},
+				{"hex": "#98ded8" , "name": "水蓝"},
+				{"hex": "#93bdf0" , "name": "深蓝"},
+				{"hex": "#aaaaaa" , "name": "亚麻灰"},
+				{"hex": "subtitle" , "name": "Macaron"},
+				{"hex": "#fa92b5" , "name": "芭比粉"},
+				{"hex": "#ac94db" , "name": "梦幻紫"},
+				{"hex": "#43bec5" , "name": "晴空蓝"},
+				{"hex": "#c6ce86" , "name": "青柠"},
+				{"hex": "#fb9b5e" , "name": "蜜柚橘"},
+				{"hex": "#f5592c" , "name": "甜心橙"},
+				{"hex": "subtitle" , "name": "Retro"},
+				{"hex": "#4a8fa1" , "name": "黛绿"},
+				{"hex": "#6893ac" , "name": "夕雾"},
+				{"hex": "#d4646b" , "name": "勃艮第红"},
+				{"hex": "#e57464" , "name": "山茶红"},
+				{"hex": "#6c6845" , "name": "雪松"},
+				{"hex": "#7e5334" , "name": "焦糖棕"}
+			],
+			"autosort" : false
+		}
+	];
+		var themecolor = "#5e72e4";
+		$("#now_color_definition").html(":root{--color: " + themecolor + "; --color-rgb: " + hex2str(themecolor) + ";}");
+	</script>
+	<body>
+		<div id="app">
+			<div id="head">
+				<div id="title" style="display:none">
+					<span id="subtitle">Pure Colors</span>
+					纯·色
+					<a class="github-link" href="https://github.com/solstice23/purecolor" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530.97 517.81" width="30" height="30"><defs></defs><path d="M265.47,0C118.88,0,0,118.85,0,265.47,0,382.75,76.06,482.24,181.57,517.35c13.27,2.44,18.12-5.76,18.12-12.79,0-6.31-.23-23-.36-45.15-73.85,16-89.43-35.59-89.43-35.59C97.83,393.16,80.42,385,80.42,385c-24.1-16.47,1.83-16.13,1.83-16.13,26.64,1.87,40.66,27.35,40.66,27.35,23.68,40.57,62.14,28.85,77.26,22.06,2.42-17.16,9.28-28.85,16.86-35.49-58.95-6.7-120.93-29.47-120.93-131.2,0-29,10.35-52.67,27.33-71.23-2.73-6.72-11.84-33.71,2.6-70.25,0,0,22.29-7.14,73,27.21a251.54,251.54,0,0,1,132.93,0C382.65,103,404.9,110.1,404.9,110.1c14.49,36.54,5.37,63.53,2.64,70.25,17,18.56,27.29,42.25,27.29,71.23,0,102-62.07,124.42-121.21,131,9.53,8.2,18,24.4,18,49.16,0,35.49-.33,64.12-.33,72.83,0,7.09,4.79,15.35,18.26,12.76C455,482.15,531,382.72,531,265.47,531,118.85,412.1,0,265.47,0Z" transform="translate(0)" style="fill: var(--color); fill-rule: evenodd;"></path></svg></a>
+				</div>
+				<div id="info">
+					<div id="rgb" class="colorinfo-item"><span class="colorinfo-title">RGB</span>{{ color_rgb_array['R'] }} , {{ color_rgb_array['G'] }} , {{ color_rgb_array['B'] }}</div>
+					<div id="hex" class="colorinfo-item"><span class="colorinfo-title">HEX</span>{{ color_uppercase }}</div>
+					<div id="hsl" class="colorinfo-item"><span class="colorinfo-title">HSL</span>{{ Math.round(color_hsl_array['h'] * 360)}}° , {{ Math.trunc(color_hsl_array['s'] * 100)}}<span class="hsl-dec">{{ ((color_hsl_array['s'] * 100) % 1).toFixed(1).replace("0.", ".") }}</span>% , {{ Math.trunc(color_hsl_array['l'] * 100)}}<span class="hsl-dec">{{ ((color_hsl_array['l'] * 100) % 1).toFixed(1).replace("0.", ".") }}</span>%</div>
+					<div id="gray" class="colorinfo-item"><span class="colorinfo-title">Gray</span>{{ vhex2gray(color) }}</div>
+				</div>
+			</div>
+			<div id="content">
+								<div v-for="group in list" class="color-group" v-if="notfound == false"><!--正常-->
+					<div class="color-group-title">{{ group.name }}</div>
+					<div class="color-group-container">
+						<div v-for="item in sorted(group.colors , group.autosort)" class="color-item" v-bind:style="'--item-color: ' + item.hex + '; --item-color-rgb: ' + colorhex2str(item.hex) + '; --item-shadow-color-rgb: ' + colorhex2str(item.hex) + ';'" v-bind:hex="item.hex" v-bind:class="{current: color == item.hex , toolight: vistoolight(item.hex) , 'color-group-subtitle': (item.hex == 'subtitle')}">
+							<div v-if="item.hex != 'subtitle'" v-bind:style="{background: item.hex}" class="color-preview" v-on:click="vchangecolor(item.hex);"></div>
+							<div class="color-name">{{ (item.name == '' || item.name == undefined) ? item.hex : item.name }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="notfound" v-if="notfound == true"> <!--404-->
+					404<div class="notfound-tip">好像找不到这个色板...</div>
+				</div>
+			</div>
+		</div>
+		<div id="wave_container">
+			<div id="wave">
+				<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+					<defs>
+						<path id="gentle-wave" class="transition-delay" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+					</defs>
+					<g class="parallax">
+						<use class="transition-delay" xlink:href="#gentle-wave" x="48" y="0"/>
+						<use class="transition-delay" xlink:href="#gentle-wave" x="48" y="3"/>
+						<use class="transition-delay" xlink:href="#gentle-wave" x="48" y="5"/>
+						<use class="transition-delay" xlink:href="#gentle-wave" x="48" y="7"/>
+					</g>
+				</svg>
+			</div>
+			<div id="wave_filler" class="transition-delay"></div>
+		</div>
+		<div id="mask"></div>
+		<div id="mask2"></div>
+		<div class="fabs">
+			<button id="rand_color" class="btn" onclick="randomcolor();">
+				<svg t="1580568273568" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1899" width="18" height="18" style="transform: translateY(2px);"><path d="M768.863 325.733c-48.775 0-170.409 121.182-259.229 207.077-134.661 130.244-261.862 256.802-363.67 256.802h-62.62C57.75 789.612 37 768.828 37 743.223c0-25.604 20.749-46.387 46.342-46.387h62.622c64.335 0 194.592-129.518 299.256-230.745 127.382-123.198 237.392-233.135 323.643-233.135h59.769l-63.418-61.55c-18.113-18.088-18.142-45.665-0.062-63.788 18.08-18.128 47.422-18.164 65.535-0.07l142.708 142.495A46.306 46.306 0 0 1 987 282.83c0 12.308-4.893 24.06-13.604 32.759l-142.71 142.4c-9.043 9.032-20.89 13.328-32.735 13.328-11.875 0-23.749-4.977-32.799-14.05-18.08-18.121-18.05-48.358 0.062-66.445l63.417-65.09h-59.768z m61.824 238.627c-18.113-18.095-47.456-18.066-65.535 0.062-18.08 18.121-18.05 49.237 0.062 67.323l63.417 65.09h-59.768c-38.06 0-101.643-56.357-164.685-115.353-18.69-17.493-48.021-17.394-65.495 1.306-17.486 18.7-16.507 49.382 2.183 66.87 96.042 89.898 160.826 139.952 227.997 139.952h59.769l-63.418 61.549c-18.113 18.087-18.142 46.552-0.062 64.674 9.051 9.072 20.924 13.167 32.799 13.167 11.845 0 23.692-4.74 32.736-13.773l142.708-142.619c8.71-8.7 13.604-20.56 13.604-32.87a46.44 46.44 0 0 0-13.604-32.842L830.687 564.36zM83.342 325.733h62.622c48.84 0 121.646 62.22 179.612 114.893 8.88 8.065 20.026 12.923 31.147 12.923 12.604 0 25.172-4.677 34.315-14.75 17.208-18.954 15.8-49.839-3.146-67.055-90.646-82.365-166.477-138.787-241.928-138.787H83.342C57.749 232.957 37 253.743 37 279.346s20.75 46.387 46.342 46.387z" p-id="1900" fill="#ffffff" style="transition: all .3s ease;"></path></svg>
+				<span style="width: 1px;display: inline-block;"></span>
+				随机
+		</button></div>
+	</body>
+</html>
+
+<script>
+	var app = new Vue({
+		el: '#app',
+		data: {
+			color: themecolor,
+			list: color_json,
+			notfound: false,
+			need_password: false
+		},
+		watch: {
+			color: function (newcolor, oldcolor) {
+				$("#now_color_definition").html(":root{--color: " + newcolor + "; --color-rgb: " + hex2str(newcolor) + ";}");
+			}
+		},
+		computed: {
+			color_uppercase: function () {
+				return this.color.toUpperCase();
+			},
+			color_rgb: function () {
+				return hex2str(this.color);
+			},
+			color_rgb_array: function () {
+				return hex2rgb(this.color);
+			},
+			color_hsl_array: function () {
+				let rgb_array = hex2rgb(this.color);
+				return rgb2hsl(rgb_array['R'], rgb_array['G'], rgb_array['B']);
+			}
+		},
+		methods:{
+			colorhex2str: function (color) {
+				return hex2str(color);
+			},
+			vchangecolor: function(color){
+				changecolor(color);
+			},
+			vistoolight: function(color){
+				return istoolight(color);
+			},
+			vhex2gray: function(hex){
+				return hex2gray(hex);
+			},
+			sorted: function (numbers , autosort) {
+				if (autosort != true){
+					return numbers;
+				}
+				return numbers.slice().sort(function (a,b) {
+					if (a.hex == "subtitle" || b.hex == "subtitle"){
+						return false;
+					}
+					a = a.hex;
+					b = b.hex;
+					let rgb_array1 = hex2rgb(a);
+					let rgb_array2 = hex2rgb(b);
+					let hsl1 = rgb2hsl(rgb_array1['R'], rgb_array1['G'], rgb_array1['B']);
+					let hsl2 = rgb2hsl(rgb_array2['R'], rgb_array2['G'], rgb_array2['B']);
+					return hsl1['h'] - hsl2['h'];
+				});
+			}
+		}
+	});
+	function changecolor(color){
+		if ($("body").hasClass("color-refreshing")){
+			return;
+		}
+		app.color = color;
+		$("body").removeClass("color-refreshing");
+		setTimeout(function(){
+			$("body").addClass("color-refreshing");
+			$("body").removeClass("toolight");
+			if (istoolight(color)){
+				$("body").addClass("toolight");
+			}
+			setTimeout(function(){
+				$("body").removeClass("color-refreshing");
+			}, 1100);
+		} , 50);
+	}
+	$(window).resize(function(){
+		let padding = ((document.body.clientWidth - 25 * 2) % (50 + 50)) / 2;
+		$("#mobile_color_group_container_padding_definition").html(':root{--mobile-color-group-container-padding: ' + padding + 'px;}');
+	});
+	$(window).trigger("resize");
+</script>
