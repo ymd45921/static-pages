@@ -12,16 +12,17 @@
 
 本仓库下现在包含的独立页面，截止于 2021/02/10 更新：
 
-| 名称               | 目录                           | 部署地址                                |
-| ------------------ | ------------------------------ | --------------------------------------- |
-| 黄油画廊           | [*](gallery/index.html)        | https://pages.shiraha.cn/gallery        |
-| UTSC 3D 元素周期表 | [*](periodic-table/index.html) | https://pages.shiraha.cn/periodic-table |
-| 魔方游戏           | [*](rubiks-cube/index.html)    | https://pages.shiraha.cn/rubiks-cube    |
-| 404 Page           | [*](404.html)                  | https://pages.shiraha.cn/404.html       |
-| 调色板 Pure Color  | [*](color/index.html)          | https://pages.shiraha.cn/color          |
-| IPFS 文件上传/获取 | [*](ipfs/index.html)           | https://pages.shiraha.cn/ipfs           |
+| 名称                   | 目录                           | 部署地址                                |
+| ---------------------- | ------------------------------ | --------------------------------------- |
+| 黄油画廊               | [*](gallery/index.html)        | https://pages.shiraha.cn/gallery        |
+| UTSC 3D 元素周期表     | [*](periodic-table/index.html) | https://pages.shiraha.cn/periodic-table |
+| 魔方游戏               | [*](rubiks-cube/index.html)    | https://pages.shiraha.cn/rubiks-cube    |
+| 404 Page               | [*](404.html)                  | https://pages.shiraha.cn/404.html       |
+| 调色板 Pure Color      | [*](color/index.html)          | https://pages.shiraha.cn/color          |
+| ~~IPFS 文件上传/获取~~ | [*](ipfs/index.html)           | ~~https://pages.shiraha.cn/ipfs~~       |
+| 便携式空调             | [*](ac/index.html)             | https://pages.shiraha.cn/ac             |
 
-
+IPFS 文件上传获取使用的 API 已经失效，如果有新的 API 就恢复了再更新吧。
 
 ## 更新日志
 
