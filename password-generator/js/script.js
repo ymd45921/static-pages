@@ -52,6 +52,16 @@ const copyBtn = resultEl;
 const copyInfo = document.querySelector(".result__info.right");
 const copiedInfo = document.querySelector(".result__info.left");
 
+// 元素工具
+const hideInfo = el => {
+	el.style.transform = "translateY(200%)";
+	el.style.opacity = "0";
+}
+const showInfo = el => {
+	el.style.transform = "translateY(0%)";
+	el.style.opacity = "0.75";
+}
+
 
 /**
  * 绑定事件
@@ -60,7 +70,7 @@ const copiedInfo = document.querySelector(".result__info.left");
 copyBtn.addEventListener("click", () => {
 	const textarea = document.createElement("textarea");
 	const password = resultEl.innerText;
-	if (!password || notPasswd.includes(password)) {
+	if (!isPasswd(password)) {
 		callGenerator();
 		return;
 	}
@@ -69,11 +79,8 @@ copyBtn.addEventListener("click", () => {
 	textarea.select();
 	document.execCommand("copy");
 	textarea.remove();
-
-	copyInfo.style.transform = "translateY(200%)";
-	copyInfo.style.opacity = "0";
-	copiedInfo.style.transform = "translateY(0%)";
-	copiedInfo.style.opacity = "0.75";
+	hideInfo(copyInfo); 
+	showInfo(copiedInfo);
 });
 
 // 点击生成密码按钮逻辑
@@ -84,12 +91,9 @@ const callGenerator = () => {
 	const hasNumber = numberEl.checked;
 	const hasSymbol = symbolEl.checked;
 	resultEl.innerText = generatePassword(length, hasLower, hasUpper, hasNumber, hasSymbol);
-	if (!notPasswd.includes(resultEl.innerText)) {
-		copyInfo.style.transform = "translateY(0%)";
-		copyInfo.style.opacity = "0.75";
-	}
-	copiedInfo.style.transform = "translateY(200%)";
-	copiedInfo.style.opacity = "0";
+	if (isPasswd(resultEl.innerText)) showInfo(copyInfo);
+	else hideInfo(copyInfo);
+	hideInfo(copiedInfo);
 };
 generateBtn.addEventListener("click", callGenerator);
 
