@@ -1,5 +1,10 @@
+/**
+ * 基本
+ */
 // 每次刷新时清空控制台
 console.clear();
+const notPasswd = ["CLICK GENERATE", "点击生成", "请至少选择一类字符！"];
+const isPasswd = (passwd) => passwd && !notPasswd.includes(passwd); 
 
 
 /**
@@ -19,8 +24,8 @@ applyFill(slider.querySelector("input"));
 // 滑条元素的属性更新函数
 function applyFill(slider) {
 	const percentage = (100 * (slider.value - slider.min)) / (slider.max - slider.min);
-	const bg = `linear-gradient(90deg, var(--slider-filled) ${percentage}%, var(--slider-unfill) ${percentage +
-		0.1}%)`;
+	const bg = `linear-gradient(90deg, var(--slider-filled) ${percentage}%, 
+		var(--slider-unfill) ${percentage + 0.1}%)`;
 	slider.style.background = bg;
 	sliderValue.setAttribute("data-length", slider.value);
 }
@@ -55,9 +60,7 @@ const copiedInfo = document.querySelector(".result__info.left");
 copyBtn.addEventListener("click", () => {
 	const textarea = document.createElement("textarea");
 	const password = resultEl.innerText;
-	if (!password || 
-		password == "CLICK GENERATE" || 
-		password == "点击生成") {
+	if (!password || notPasswd.includes(password)) {
 		callGenerator();
 		return;
 	}
@@ -81,8 +84,10 @@ const callGenerator = () => {
 	const hasNumber = numberEl.checked;
 	const hasSymbol = symbolEl.checked;
 	resultEl.innerText = generatePassword(length, hasLower, hasUpper, hasNumber, hasSymbol);
-	copyInfo.style.transform = "translateY(0%)";
-	copyInfo.style.opacity = "0.75";
+	if (!notPasswd.includes(resultEl.innerText)) {
+		copyInfo.style.transform = "translateY(0%)";
+		copyInfo.style.opacity = "0.75";
+	}
 	copiedInfo.style.transform = "translateY(200%)";
 	copiedInfo.style.opacity = "0";
 };
@@ -97,9 +102,7 @@ function generatePassword(length, lower, upper, number, symbol) {
 	let generatedPassword = "";
 	const typesCount = lower + upper + number + symbol;
 	const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(item => Object.values(item)[0]);
-	if (typesCount === 0) {
-		return "";
-	}
+	if (typesCount === 0) return notPasswd[2];
 	for (let i = 0; i < length; i++) {
 		typesArr.forEach(type => {
 			const funcName = Object.keys(type)[0];
