@@ -1,111 +1,63 @@
-// This is a simple Password Generator App that will generate random password maybe you can you them to secure your account.
-// I tried my best to make the code as simple as possible please dont mind the variable names.
-// Also this idea came in my mind after checking Traversy Media's latest video.
-
-// Clear the concole on every refresh
+// 每次刷新时清空控制台
 console.clear();
 
-// Range Slider Properties.
-// Fill : The trailing color that you see when you drag the slider.
-// background : Default Range Slider Background
-const sliderProps = {
-	fill: "#0B1EDF",
-	background: "rgba(255, 255, 255, 0.214)",
-};
-
-// Selecting the Range Slider container which will effect the LENGTH property of the password.
+/**
+ * 滑条相关
+ */
+// 选择相关元素
 const slider = document.querySelector(".range__slider");
-
-// Text which will show the value of the range slider.
 const sliderValue = document.querySelector(".length__title");
 
-// Using Event Listener to apply the fill and also change the value of the text.
+// 为滑条元素绑定时间并初始化状态
 slider.querySelector("input").addEventListener("input", event => {
 	sliderValue.setAttribute("data-length", event.target.value);
 	applyFill(event.target);
 });
-// Selecting the range input and passing it in the applyFill func.
 applyFill(slider.querySelector("input"));
-// This function is responsible to create the trailing color and setting the fill.
+
+// 滑条元素的属性更新函数
 function applyFill(slider) {
 	const percentage = (100 * (slider.value - slider.min)) / (slider.max - slider.min);
-	const bg = `linear-gradient(90deg, ${sliderProps.fill} ${percentage}%, ${sliderProps.background} ${percentage +
+	const bg = `linear-gradient(90deg, var(--slider-filled) ${percentage}%, var(--slider-unfill) ${percentage +
 		0.1}%)`;
 	slider.style.background = bg;
 	sliderValue.setAttribute("data-length", slider.value);
 }
 
-// Object of all the function names that we will use to create random letters of password
-const randomFunc = {
-	lower: getRandomLower,
-	upper: getRandomUpper,
-	number: getRandomNumber,
-	symbol: getRandomSymbol,
-};
 
-// Generator Functions
-// All the functions that are responsible to return a random value taht we will use to create password.
-function getRandomLower() {
-	return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
-function getRandomUpper() {
-	return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-function getRandomNumber() {
-	return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-function getRandomSymbol() {
-	const symbols = '~!@#$%^&*()_+{}":?><;.,';
-	return symbols[Math.floor(Math.random() * symbols.length)];
-}
-
-// Selecting all the DOM Elements that are necessary -->
-
-// The Viewbox where the result will be shown
+/**
+ * 选择必要的元素以备使用
+ */
+// 显示生成结果的文本框
 const resultEl = document.getElementById("result");
-// The input slider, will use to change the length of the password
+// 用来设置生成长度的滑动条
 const lengthEl = document.getElementById("slider");
 
-// Checkboxes representing the options that is responsible to create differnt type of password based on user
+// 生成选项的复选框
 const uppercaseEl = document.getElementById("uppercase");
 const lowercaseEl = document.getElementById("lowercase");
 const numberEl = document.getElementById("number");
 const symbolEl = document.getElementById("symbol");
 
-// Button to generate the password
+// 其他元素
 const generateBtn = document.getElementById("generate");
-// Button to copy the text
-const copyBtn = document.getElementById("copy-btn");
-// Result viewbox container
-const resultContainer = document.querySelector(".result");
-// Text info showed after generate button is clicked
+const copyBtn = resultEl;
+// const resultContainer = document.querySelector(".result");
 const copyInfo = document.querySelector(".result__info.right");
-// Text appear after copy button is clicked
 const copiedInfo = document.querySelector(".result__info.left");
 
-// Update Css Props of the COPY button
-// Getting the bounds of the result viewbox container
-let resultContainerBound = {
-	left: resultContainer.getBoundingClientRect().left,
-	top: resultContainer.getBoundingClientRect().top,
-};
-// This will update the position of the copy button based on mouse Position
-resultContainer.addEventListener("mousemove", e => {
-	copyBtn.style.setProperty("--x", `${e.x - resultContainerBound.left}px`);
-	copyBtn.style.setProperty("--y", `${e.y - resultContainerBound.top}px`);
-});
-window.addEventListener("resize", e => {
-	resultContainerBound = {
-		left: resultContainer.getBoundingClientRect().left,
-		top: resultContainer.getBoundingClientRect().top,
-	};
-});
 
-// Copy Password in clipboard
+/**
+ * 绑定事件
+ */
+// 将生成的密码复制到剪贴板
 copyBtn.addEventListener("click", () => {
 	const textarea = document.createElement("textarea");
 	const password = resultEl.innerText;
-	if (!password || password == "CLICK GENERATE") {
+	if (!password || 
+		password == "CLICK GENERATE" || 
+		password == "点击生成") {
+		callGenerator();
 		return;
 	}
 	textarea.value = password;
@@ -120,8 +72,8 @@ copyBtn.addEventListener("click", () => {
 	copiedInfo.style.opacity = "0.75";
 });
 
-// When Generate is clicked Password id generated.
-generateBtn.addEventListener("click", () => {
+// 点击生成密码按钮逻辑
+const callGenerator = () => {
 	const length = +lengthEl.value;
 	const hasLower = lowercaseEl.checked;
 	const hasUpper = uppercaseEl.checked;
@@ -132,9 +84,14 @@ generateBtn.addEventListener("click", () => {
 	copyInfo.style.opacity = "0.75";
 	copiedInfo.style.transform = "translateY(200%)";
 	copiedInfo.style.opacity = "0";
-});
+};
+generateBtn.addEventListener("click", callGenerator);
 
-// Function responsible to generate password and then returning it.
+
+/**
+ * 生成密码逻辑
+ */
+// 随机密码生成函数
 function generatePassword(length, lower, upper, number, symbol) {
 	let generatedPassword = "";
 	const typesCount = lower + upper + number + symbol;
@@ -149,4 +106,25 @@ function generatePassword(length, lower, upper, number, symbol) {
 		});
 	}
 	return generatedPassword.slice(0, length);
+}
+
+// 生成字符工具函数
+const randomFunc = {
+	lower: getRandomLower,
+	upper: getRandomUpper,
+	number: getRandomNumber,
+	symbol: getRandomSymbol,
+};
+function getRandomLower() {
+	return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+function getRandomUpper() {
+	return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+function getRandomNumber() {
+	return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+function getRandomSymbol() {
+	const symbols = '~!@#$%^&*()_+{}":?><;.,';
+	return symbols[Math.floor(Math.random() * symbols.length)];
 }

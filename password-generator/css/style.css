@@ -1,3 +1,8 @@
+:root {
+  --slider-filled: #0B1EDF;
+  --slider-unfill: rgba(255, 255, 255, 0.214);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +26,7 @@ button {
 .container {
   margin: 15px;
   max-width: 400px;
-  min-width: 320px;
+  width: 90%;
   max-height: 600px;
   padding: 10px 25px;
   background: #0a0e31;
@@ -66,27 +71,6 @@ button {
   color: #fff;
   text-align: center;
   line-height: 65px;
-}
-.result #copy-btn {
-  position: absolute;
-  top: var(--y);
-  left: var(--x);
-  width: 38px;
-  height: 38px;
-  background: #fff;
-  border-radius: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0);
-  transition: all 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: pointer;
-  z-index: 2;
-}
-.result #copy-btn:active {
-  box-shadow: 0 0 0 200px rgba(255, 255, 255, 0.08);
-}
-.result:hover #copy-btn {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.35);
 }
 
 .field-title {
