@@ -41,4 +41,4 @@ UPD - `busuanzi` 二次开发：关联到 Vercel 之后好像每次推送——�
 
 ### v0.0.3
 
-增加了一个前端复杂密码生成器。移除了自动生成的 `index.html`。
+增加了一个前端复杂密码生成器。移除了 Github Page 自动生成的 `index.html`，替换成了 Node Serve 自动生成的页面修改版。
