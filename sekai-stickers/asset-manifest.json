@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sekai-stickers/static/css/main.f5ad5683.css",
+    "main.js": "/sekai-stickers/static/js/main.98c4f77d.js",
+    "static/media/YurukaStd.woff2": "/sekai-stickers/static/media/YurukaStd.e4589185c34a94a462b4.woff2",
+    "static/media/ShangShouFangTangTi.woff2": "/sekai-stickers/static/media/ShangShouFangTangTi.4b63e6001b3ba64f627e.woff2",
+    "index.html": "/sekai-stickers/index.html",
+    "main.f5ad5683.css.map": "/sekai-stickers/static/css/main.f5ad5683.css.map",
+    "main.98c4f77d.js.map": "/sekai-stickers/static/js/main.98c4f77d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5ad5683.css",
+    "static/js/main.98c4f77d.js"
+  ]
+}
